@@ -1,0 +1,153 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+ifstream f("graf.in");
+ofstream g("graf.out");
+
+int n,m,r[100],a[100][100],s[100],maxim;
+const float I=1.e10;
+
+struct muchie{int a,b,pond;};
+muchie v[100];
+
+void citire()
+{
+    f>>n>>m;
+    int x,i,y,z,j;
+    for(i=1;i<=m;i++)
+    {
+        f>>x;
+        v[i].a=x;
+        f>>y;
+        v[i].b=y;
+        f>>z;
+        v[i].pond=z;
+        a[x][y]=a[y][x]=z;
+
+    }
+    for(i=1;i<=n;i++)
+        for(j=1;j<=n;j++)
+          if(i!=j && a[i][j]==0)a[i][j]=I;
+
+
+}
+
+void afisare()
+{
+    cout<<"Numarul de noduri este egal cu "<<n<<endl;
+    cout<<"Numarul de muchii este egal cu "<<m<<endl;
+    for(int i=1;i<=m;i++)
+        cout<<v[i].a<<" "<<v[i].b<<" "<<v[i].pond<<endl;
+
+   /* cout<<"Matricea de adiacenta este "<<endl;
+    for(int i=1;i<=n;i++)
+        {for(int j=1;j<=n;j++)
+        cout<<a[i][j];
+        cout<<endl;}*/
+    cout<<endl;
+}
+
+void sortare()
+{
+    int ok=0,i,aux;
+    do
+    {
+        ok=0;
+        for(i=1;i<m;i++)
+            if(v[i].pond>v[i+1].pond)
+        {
+            aux=v[i].pond;
+            v[i].pond=v[i+1].pond;
+            v[i+1].pond=aux;
+            aux=v[i].a;
+            v[i].a=v[i+1].a;
+            v[i+1].a=aux;
+            aux=v[i].b;
+            v[i].b=v[i+1].b;
+            v[i+1].b=aux;
+            ok=1;
+        }
+
+    }
+    while(ok==1);
+    for(i=1;i<=m;i++)
+        cout<<v[i].a<<" "<<v[i].b<<" "<<v[i].pond<<endl;
+    cout<<endl;
+}
+
+void kruskal()
+{
+    cout<<"------>Kruskal<------"<<endl;
+   int w[n],p[n];
+   int k=1,h=0,nrmuchii=0;
+
+   for(int i=1;i<=n;i++)
+    w[i]=i;
+
+    int i=1;
+
+    while(k<n)
+    {
+        if(w[v[i].a]!=w[v[i].b])
+        {  nrmuchii++;
+            int ok=0,ok2=0;
+            for(int j=1;j<=h;j++)
+               {
+                   if(p[j]==v[i].a)ok=1;
+                   if(p[j]==v[i].b)ok2=1;
+               }
+            if(ok==0)p[++h]=v[i].a;
+            if(ok2==0)p[++h]=v[i].b;
+            if(nrmuchii!=h)
+            {w[v[i].b]=w[v[i].a];
+            for(int l=1;l<=n;l++)
+                if(v[i].b==w[l])w[l]=v[i].a;
+            cout<<v[i].a<<" "<<v[i].b<<" "<<v[i].pond<<endl;
+            k++;
+            i++;}
+            else {i++;nrmuchii--;}}
+            else i++;}
+
+    }
+
+
+void prim()
+{
+    int i,k,Min,j;
+    cout<<endl<<"------>Prim<------"<<endl;
+    for(i=2;i<=n;i++)
+        s[i]=1;
+
+    for(k=1;k<=n-1;k++)
+    {
+        Min=I;
+        for(i=1;i<=n;i++)
+            if(s[i])
+                if(Min>a[s[i]][i])
+                      {
+                          Min=a[s[i]][i];
+                          j=i;
+
+                        }
+        cout<<s[j]<<" "<<j<<" "<<a[j][s[j]]<<endl;
+        for(i=1;i<=n;i++)
+            if(s[i] && a[i][s[i]]>a[i][j])
+                s[i]=j;
+        s[j]=0;
+    }
+}
+
+
+int main()
+{
+    int i;
+    citire();
+    afisare();
+    sortare();
+    kruskal();
+    prim();
+
+    return 0;
+}

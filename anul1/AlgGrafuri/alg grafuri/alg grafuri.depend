@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1459892208 source:c:\users\cosmi\documents\alg grafuri\main.cpp
+	<iostream>
+	<fstream>
+

@@ -1,0 +1,71 @@
+#include<fstream>
+#include <iostream>
+using namespace std;
+int maxim=15000;
+int c[20][20],d[20],t[20],p[20],n,m,s;
+ifstream f("d.in");
+
+
+void citire()
+{
+    int i,j,x,y,cost;
+    f>>n>>m;
+    for(i=1; i<=n; i++)
+        for(j=1; j<=n; j++)
+            if(i==j) c[i][j]=0;
+            else c[i][j]=maxim;
+    for(i=1; i<=m; i++)
+    {
+        f>>x>>y>>cost;
+        c[x][y]=cost;
+    }
+}
+
+void dijkstra(int s)
+{
+    int i,j,k,minim;
+    for(i=1; i<=n; i++)
+    {
+        d[i]=c[s][i];    //d[i]-costul drumului minim curent
+        if(i!=s && d[i]!=maxim) t[i]=s; //t[i]-predecesorul lui i pe drumul curent de la s la i
+    }
+    p[s]=1;  //vector vizitare
+    for(k=1; k<n; k++)
+    {
+        minim=maxim;
+        for(i=1; i<=n; i++)
+            if(!p[i] && d[i]<minim)
+            {
+                minim=d[i];
+                j=i;
+            }
+        for(i=1; i<=n; i++)
+            if(!p[i])
+                if(d[i]>d[j]+c[j][i])
+                {
+                    d[i]=d[j]+c[j][i];
+                    t[i]=j;
+                }
+        p[j]=1;
+    }
+}
+
+void drum(int i)
+{
+    if(t[i]) drum(t[i]);
+    cout<<i<<" ";
+}
+
+int main()
+{
+    citire();
+    cin>>s;
+    dijkstra(s);
+    for(int i=1; i<=n; i++)
+        if(i!=s)
+        {
+            cout<<s<<"->"<<i<<": ";
+            drum(i);
+            cout<<"="<<d[i]<<endl;
+        }
+}

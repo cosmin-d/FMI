@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1464123509 source:/home/fluffy_unicorn/Desktop/info/gafuri/fleury/main.cpp
+	<iostream>
+	<fstream>
+
+1464265016 source:c:\users\cosmi\desktop\fleury\main.cpp
+	<iostream>
+	<fstream>
+
