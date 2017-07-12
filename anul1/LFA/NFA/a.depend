@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1458102233 source:c:\users\student.lab221a-6\desktop\a\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
+1458147987 source:c:\users\cosmi\desktop\a\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
+1460645158 source:c:\users\cosmi\desktop\nfa\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461055947 source:d:\poo\main.cpp
+	<iostream>
+	<fstream>
+
