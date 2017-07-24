@@ -1,0 +1,42 @@
+#wrapped h1{
+	color:#538971 !important;
+	text-align: center;
+	}
+	#wrapped{
+	background-color:rgba(0%,0%,0%,0.8)!important;
+	
+}
+	body{
+	color:#538971 !important;
+	background-image: url('backgroundhome.jpg');
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+nav > ul > li > a {
+	font-size:2em;
+	color:	#538971!important;
+}
+
+nav ul li ul{
+	 background: black !important;
+}
+nav ul li ul a {
+	font-size:2em;
+	font-family: 'Roboto', sans-serif !important;
+	color:	#538971 !important;
+}
+h2{
+	color:	#538971 !important;
+	font-size: 2em;
+	font-family: 'Roboto', sans-serif;
+}
+h4{
+	color:	#538971 !important;
+	font-size: 1em;
+	font-family: 'Roboto', sans-serif;
+}

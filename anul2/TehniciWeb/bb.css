@@ -1,0 +1,43 @@
+#wrapped{
+	background-color:rgba(9.8%,27.1%,18.4%,0.9)!important;
+	
+}
+#wrapped h1{
+	font-family:'Oxygen', sans-serif !important;
+	color:	#fdf525 !important;
+	}
+body{
+font-family:'Oxygen', sans-serif !important;
+	color:	#fdf525 !important;
+	background-image: url('backgroundbb.jpg');
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+p{
+	font-family: font-family: 'Oxygen', sans-serif !important;
+	color:	#fdf525 !important;
+}
+
+table,tr,td {
+	
+	border-color:	#fdf525!important;
+}
+nav > ul > li > a {
+	font-family: 'Oxygen',sans-serif!important;
+	color:	#fdf525 !important;
+}
+
+nav ul li ul{
+	 background: #19452F !important;
+}
+nav ul li ul a {
+	font-family: 'Oxygen',sans-serif!important;
+	color:	#fdf525 !important;
+}
+
+

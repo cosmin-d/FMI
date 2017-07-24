@@ -1,0 +1,42 @@
+#wrapped h1{
+	font-family: 'Montserrat', sans-serif !important;
+	color:	#90707c !important;
+	text-transform: uppercase;
+	}
+
+body{
+font-family: 'Montserrat', sans-serif !important;
+	color:	#90707c !important;
+	background-image: url('backgroundtd.jpg');
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-transform: uppercase;
+}
+table,tr,td {
+	
+	border-color:	#707c90!important;
+}
+p{
+	font-family: 'Montserrat', sans-serif !important;
+	color:	#90707c !important;
+	text-transform: uppercase;
+}
+nav > ul > li > a {
+	font-family: 'Montserrat', sans-serif !important;
+	color:	#90707c!important;
+	text-transform: uppercase;
+}
+
+nav ul li ul{
+	 background: #010000 !important;
+}
+nav ul li ul a {
+	font-family: 'Montserrat', sans-serif !important;
+	color:	#90707c !important;
+	text-transform: uppercase;
+}

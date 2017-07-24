@@ -1,0 +1,41 @@
+body{
+	font-family: 'Lucida Console',serif;
+	color:	#00CC00;
+	background-image: url('matrix.jpg');
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+}
+
+p{
+	font-family: 'Lucida Console',serif !important;
+	color:	#32CD32 !important;
+}
+table,tr,td{
+	
+	border-style: dashed !important;
+	border-color:	white !important;
+}
+
+
+nav > ul > li > a {
+	font-family: 'Lucida Console',serif !important;
+	color:	#32CD32 !important;
+}
+
+nav ul li ul{
+	 background: black !important;
+}
+nav ul li ul a {
+	font-family: 'Lucida Console',serif !important;
+	color:	#32CD32 !important;
+}
+#wrapped{
+	
+	background-color: black !important;
+}
+#wrapped h1{
+	color:	#32CD32 !important;
+	font-family: 'Lucida Console',serif !important;
+	}
+	
+

@@ -1,0 +1,10 @@
+function [ a ] = Untitled( m , deplasare )
+a=rand(2,m)*2-1
+if(a(1,:)<a(2,:))% et 1
+a(2,:)=a(2,:)+deplasare;
+else
+    a(2,:)=a(2,:)-deplasare;  %et -1
+end
+
+end
+
