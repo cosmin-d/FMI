@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sah@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sah">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="apeluri"/>
+    <schema id="4" parent="1" name="emp"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sakila"/>
+    <schema id="9" parent="1" name="students"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="world"/>
+    <table id="12" parent="2" name="jucatori"/>
+    <column id="13" parent="12" name="nume">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="14" parent="12" name="parola">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="15" parent="12" name="poza">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="16" parent="12" name="email">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="17" parent="12" name="punctaj">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>
